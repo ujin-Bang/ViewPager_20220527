@@ -8,6 +8,18 @@ import com.start.viewpager_20220527.fragments.IntroduceFragment
 import com.start.viewpager_20220527.fragments.NameFragment
 
 class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm){
+    override fun getPageTitle(position: Int): CharSequence? {
+        if(position == 0) {
+            return "인사페이지"
+        }
+        else if( position == 1) {
+            return "이름페이지"
+        }
+        else {
+            return "소개페이지"
+        }
+    }
+
     override fun getCount(): Int {
         return 3
     }
